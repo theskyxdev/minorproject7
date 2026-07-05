@@ -4,6 +4,12 @@ SocialSphere is a premium, responsive full-stack social media application. Built
 
 ---
 
+
+<img width="1826" height="1043" alt="Screenshot 2026-07-06 004016" src="https://github.com/user-attachments/assets/c0b87f5c-dc3c-412f-8ac2-54a9d2924a18" />
+
+<img width="1852" height="977" alt="image" src="https://github.com/user-attachments/assets/bea19fa1-1536-4542-b1a7-90cbf9a8636a" />
+
+
 ## Features Implemented
 
 ### 1. User Authentication & Security
@@ -37,96 +43,4 @@ SocialSphere is a premium, responsive full-stack social media application. Built
 
 ---
 
-## Technologies Used
 
-### Frontend
-- **React.js**: Single Page App routing and hooks management.
-- **Vite**: Rapid hot-reloading development server and bundler.
-- **React Router Dom**: Dynamic page routing.
-- **Lucide React**: Modern svg iconography.
-
-### Backend
-- **Node.js & Express.js**: REST API server and multipart request parser.
-- **MongoDB & Mongoose**: Object-document database and schemas mapping.
-- **jsonwebtoken (JWT)**: Security token signing and verification.
-- **bcryptjs**: Password hashing.
-- **multer**: File upload storage.
-
----
-
-## Installation & Setup Guide
-
-### Prerequisites
-- Node.js installed (v18.0.0 or higher recommended).
-- MongoDB installed locally and running on port `27017` (or access to a MongoDB Atlas URL).
-
-### Step 1: Clone or Open the Repository
-Unpack the files and verify the structure:
-```
-social-media-app/
-├── backend/
-└── frontend/
-```
-
-### Step 2: Configure Environment Variables
-Create a file named `.env` in the `backend/` directory:
-```env
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/social_media_db
-JWT_SECRET=super_secret_key_12345
-```
-
-### Step 3: Run the Backend
-Open a terminal in the `backend/` folder:
-```bash
-# Install backend packages
-npm install
-
-# Start backend server
-node server.js
-```
-The console will display:
-* `Server running in development mode on port 5000`
-* `MongoDB Connected: localhost`
-
-### Step 4: Run the Frontend
-Open a separate terminal in the `frontend/` folder:
-```bash
-# Install frontend packages
-npm install
-
-# Run Vite dev server
-npm run dev
-```
-Open your browser and navigate to `http://localhost:5173`.
-
----
-
-## API Documentation
-
-### 1. Authentication
-* `POST /api/auth/register` - Register a new account.
-  - Body: `{ "username": "...", "email": "...", "password": "..." }`
-* `POST /api/auth/login` - Sign in.
-  - Body: `{ "email": "...", "password": "..." }`
-* `GET /api/auth/me` - Retrieve current user details (Header token required).
-
-### 2. User Profiles
-* `GET /api/users` - Get suggestions list of other users.
-* `GET /api/users/:id` - Get user details, bio, follow metrics, and user posts.
-* `PUT /api/users/profile` - Update bio / username text.
-  - Body: `{ "username": "...", "bio": "..." }`
-* `POST /api/users/profile/picture` - Upload multipart avatar (`image` field).
-* `POST /api/users/:id/follow` - Toggle follow/unfollow status.
-
-### 3. Posts
-* `POST /api/posts` - Create post. Supports multipart forms with content and optional `image` file.
-* `GET /api/posts` - Get all posts feed.
-* `GET /api/posts/:id` - Get single post by ID.
-* `PUT /api/posts/:id` - Edit post content (Author only).
-  - Body: `{ "content": "..." }`
-* `DELETE /api/posts/:id` - Delete post and remove static asset (Author only).
-* `POST /api/posts/:id/like` - Toggle like/unlike status.
-* `POST /api/posts/:id/comment` - Append a comment.
-  - Body: `{ "content": "..." }`
-* `DELETE /api/posts/:id/comment/:commentId` - Delete a comment (Author / Post Owner only).
