@@ -7,7 +7,7 @@ SocialSphere is a premium, responsive full-stack social media application. Built
 
 <img width="1826" height="1043" alt="Screenshot 2026-07-06 004016" src="https://github.com/user-attachments/assets/c0b87f5c-dc3c-412f-8ac2-54a9d2924a18" />
 
-
+<img width="1852" height="977" alt="image" src="https://github.com/user-attachments/assets/bea19fa1-1536-4542-b1a7-90cbf9a8636a" />
 
 
 ## Features Implemented
